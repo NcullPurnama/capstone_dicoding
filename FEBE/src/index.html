@@ -5,60 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FOREMAS - Gold Price Prediction</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      .gradient-bg {
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      }
-      .gold-gradient {
-        background: linear-gradient(135deg, #ffd700 0%, #d4af37 100%);
-      }
-      .chart-container {
-        height: 400px;
-        position: relative;
-      }
-      .prediction-card {
-        transition: all 0.3s ease;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-          0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      }
-      .prediction-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-          0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      }
-      .floating {
-        animation: floating 3s ease-in-out infinite;
-      }
-      @keyframes floating {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-15px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
-  <body class="font-sans bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
+  <body>
+    <div id="app">
+      <!-- Navigation -->
+    <nav class="bg-nav shadow-lg sticky top-0 z-50">
       <div class="max-w-6xl mx-auto px-4">
         <div class="flex justify-between">
           <div class="flex space-x-7">
             <div class="flex items-center py-4 px-2">
-              <span
-                class="font-semibold text-gray-900 text-2xl flex items-center"
-              >
-                <i class="fas fa-coins text-yellow-500 mr-2"></i>
-                FOREMAS
-              </span>
+              <img src="/logo.jpg" alt="logo" class="w-3/4 logo" />
             </div>
           </div>
           <div class="hidden md:flex items-center space-x-1">
@@ -157,7 +114,7 @@
             <span class="text-yellow-600">FOREMAS</span>
           </h1>
           <p class="text-lg md:text-xl text-gray-600 mb-8">
-            Leveraging ARIMA models to forecast gold prices with high accuracy.
+            Leveraging LSTM models to forecast gold prices with high accuracy.
             Make informed investment decisions with our cutting-edge prediction
             system.
           </p>
@@ -179,11 +136,7 @@
           </div>
         </div>
         <div class="md:w-1/2 flex justify-center">
-          <img
-            src="bar-mintvaries-gold-1kilo_1.webp"
-            alt="Gold Bars"
-            class="w-3/4 floating"
-          />
+         <img src="/bar-mintvaries-gold-1kilo_1.webp" alt="Gold Bars" class="w-3/4 floating" />
         </div>
       </div>
     </section>
@@ -192,26 +145,21 @@
     <section id="about" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <h2
-          class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16"
+          class="text-3xl md:text-4xl font-bold text-center mb-16 light"
         >
           About <span class="text-yellow-600">FOREMAS</span>
         </h2>
 
         <div class="flex flex-col md:flex-row items-center mb-16">
           <div class="md:w-1/2 mb-10 md:mb-0">
-            <img
-              src="chart.png"
-              alt="Data Analysis"
-              class="w-full rounded-lg shadow-xl"
-            />
+            <img src="/chart.png" alt="Chart" class="rounded-lg shadow-xl" />
           </div>
           <div class="md:w-1/2 md:pl-12">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-              Advanced ARIMA Forecasting
+            <h3 class="text-2xl font-semibold light mb-4">
+              Advanced LSTM Forecasting
             </h3>
-            <p class="text-gray-600 mb-6">
-              FOREMAS utilizes the ARIMA (AutoRegressive Integrated Moving
-              Average) model, a powerful statistical method for time series
+            <p class="text-gray-600 mb-6 white">
+              FOREMAS utilizes the LSTM (Long Short-Term Memory) model, a powerful statistical method for time series
               forecasting. Our system analyzes historical gold price data to
               predict future trends with remarkable accuracy.
             </p>
@@ -221,10 +169,10 @@
                   <i class="fas fa-chart-line text-yellow-600"></i>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-gray-800">
+                  <h4 class="font-semibold light">
                     Time Series Analysis
                   </h4>
-                  <p class="text-gray-600">
+                  <p class="text-gray-600 white">
                     Captures patterns and trends in gold price movements over
                     time.
                   </p>
@@ -235,8 +183,8 @@
                   <i class="fas fa-brain text-yellow-600"></i>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-gray-800">Machine Learning</h4>
-                  <p class="text-gray-600">
+                  <h4 class="font-semibold light">Machine Learning</h4>
+                  <p class="text-gray-600 white">
                     Our model continuously learns and improves from new data
                     inputs.
                   </p>
@@ -247,8 +195,8 @@
                   <i class="fas fa-bullseye text-yellow-600"></i>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-gray-800">High Accuracy</h4>
-                  <p class="text-gray-600">
+                  <h4 class="font-semibold text-gray-800 light">High Accuracy</h4>
+                  <p class="text-gray-600 white">
                     Precision-tuned parameters for reliable forecasting results.
                   </p>
                 </div>
@@ -279,7 +227,7 @@
             </div>
             <h3 class="text-xl font-semibold mb-3">Model Training</h3>
             <p class="text-gray-600">
-              Our ARIMA model is carefully trained with optimal parameters to
+              Our LSTM model is carefully trained with optimal parameters to
               capture the complex patterns in gold price movements.
             </p>
           </div>
@@ -325,7 +273,7 @@
               <div
                 class="h-48 bg-gradient-to-r from-yellow-100 to-yellow-200 flex items-center justify-center"
               >
-                <i class="fas fa-user-tie text-6xl text-yellow-600"></i>
+                <img src="/2.png" alt="Rasyid" class="rounded-lg shadow-xl turun" />
               </div>
               <div class="p-6">
                 <h4 class="text-xl font-bold mb-1">Rasyid Naufal</h4>
@@ -334,25 +282,21 @@
                   Time series analysis using LSTM model that be used for financial forecasting.
                 </p>
                 <div class="mt-4 flex space-x-4">
-                  <a href="#" class="text-gray-400 hover:text-yellow-500">
+                  <a href="https://www.linkedin.com/in/rasyidnaufal/" class="text-gray-400 hover:text-yellow-500" target="_blank">
                     <i class="fab fa-linkedin"></i>
                   </a>
-                  <a href="#" class="text-gray-400 hover:text-yellow-500">
+                  <a href="https://github.com/Ranfl" class="text-gray-400 hover:text-yellow-500" target="_blank">
                     <i class="fab fa-github"></i>
                   </a>
                 </div>
               </div>
             </div>
-            <div
-              class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
-            >
-              <div
-                class="h-48 bg-gradient-to-r from-yellow-100 to-yellow-200 flex items-center justify-center"
-              >
-                <i class="fas fa-laptop-code text-6xl text-yellow-600"></i>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300" >
+              <div class="h-48 bg-gradient-to-r from-yellow-100 to-yellow-200 flex items-center justify-center">
+                <img src="/1.png" alt="Viddy" class="rounded-lg shadow-xl turun" />
               </div>
               <div class="p-6">
-                <h4 class="text-xl font-bold mb-1">Viddy</h4>
+                <h4 class="text-xl font-bold mb-1">Viddy Virstandi</h4>
                 <p class="text-yellow-600 font-medium mb-3">ML Developer</p>
                 <p class="text-gray-600">
                   Specializes in model optimization and deployment, ensuring our
@@ -374,7 +318,7 @@
               <div
                 class="h-48 bg-gradient-to-r from-yellow-100 to-yellow-200 flex items-center justify-center"
               >
-                <i class="fas fa-chart-bar text-6xl text-yellow-600"></i>
+                <img src="/3.png" alt="Zita" class="rounded-lg shadow-xl turun" />
               </div>
               <div class="p-6">
                 <h4 class="text-xl font-bold mb-1">Zita Natalia</h4>
@@ -384,7 +328,7 @@
                   engineering to ensure high-quality input for our models.
                 </p>
                 <div class="mt-4 flex space-x-4">
-                  <a href="#" class="text-gray-400 hover:text-yellow-500">
+                  <a href="#" class="text-gray-400 hover:text-yellow-500" target="_blank">
                     <i class="fab fa-linkedin"></i>
                   </a>
                   <a href="#" class="text-gray-400 hover:text-yellow-500">
@@ -485,12 +429,12 @@
     <section id="predict" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <h2
-          class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4"
+          class="text-3xl md:text-4xl font-bold text-center text-gray-800 light mb-4"
         >
           Gold Price <span class="text-yellow-600">Prediction</span>
         </h2>
-        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-16">
-          Enter your parameters and let our ARIMA model forecast future gold
+        <p class="text-center text-gray-600 max-w-2xl mx-auto mb-16 white">
+          Enter your parameters and let our LSTM model forecast future gold
           prices for you.
         </p>
 
@@ -521,58 +465,6 @@
                     <option value="365">1 Year</option>
                   </select>
                 </div>
-
-                <div class="mb-6">
-                  <label
-                    class="block text-gray-700 font-medium mb-2"
-                    for="confidence"
-                  >
-                    Confidence Level (%)
-                  </label>
-                  <input
-                    type="range"
-                    id="confidence"
-                    min="80"
-                    max="99"
-                    value="95"
-                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-yellow-500"
-                  />
-                  <div class="flex justify-between text-sm text-gray-500 mt-1">
-                    <span>80%</span>
-                    <span id="confidenceValue">95%</span>
-                    <span>99%</span>
-                  </div>
-                </div>
-
-                <div class="mb-6">
-                  <label class="block text-gray-700 font-medium mb-2">
-                    Include Additional Factors
-                  </label>
-                  <div class="space-y-2">
-                    <label class="flex items-center">
-                      <input
-                        type="checkbox"
-                        class="form-checkbox h-5 w-5 text-yellow-600 rounded focus:ring-yellow-500 border-gray-300"
-                      />
-                      <span class="ml-2 text-gray-700">Inflation Rates</span>
-                    </label>
-                    <label class="flex items-center">
-                      <input
-                        type="checkbox"
-                        class="form-checkbox h-5 w-5 text-yellow-600 rounded focus:ring-yellow-500 border-gray-300"
-                      />
-                      <span class="ml-2 text-gray-700">USD Exchange Rates</span>
-                    </label>
-                    <label class="flex items-center">
-                      <input
-                        type="checkbox"
-                        class="form-checkbox h-5 w-5 text-yellow-600 rounded focus:ring-yellow-500 border-gray-300"
-                      />
-                      <span class="ml-2 text-gray-700">Market Volatility</span>
-                    </label>
-                  </div>
-                </div>
-
                 <button
                   type="button"
                   id="predictButton"
@@ -805,7 +697,6 @@
                   </div>
                   <div>
                     <h4 class="font-semibold text-gray-800">Email Us</h4>
-                    <p class="text-gray-600">info@foremas.com</p>
                     <p class="text-gray-600">support@foremas.com</p>
                   </div>
                 </div>
@@ -816,8 +707,8 @@
                   </div>
                   <div>
                     <h4 class="font-semibold text-gray-800">Call Us</h4>
-                    <p class="text-gray-600">+62 21 1234 5678</p>
-                    <p class="text-gray-600">+62 812 3456 7890</p>
+                    <p class="text-gray-600">+62 896-5991-8449</p>
+                    <p class="text-gray-600">+62 858-8692-0987</p>
                   </div>
                 </div>
 
@@ -830,36 +721,6 @@
                     <p class="text-gray-600">Monday - Friday: 9:00 - 17:00</p>
                     <p class="text-gray-600">Saturday: 9:00 - 12:00</p>
                   </div>
-                </div>
-              </div>
-
-              <div class="mt-8">
-                <h4 class="font-semibold text-gray-800 mb-4">Follow Us</h4>
-                <div class="flex space-x-4">
-                  <a
-                    href="#"
-                    class="bg-gray-100 p-3 rounded-full text-gray-700 hover:bg-yellow-100 hover:text-yellow-600 transition duration-300"
-                  >
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="bg-gray-100 p-3 rounded-full text-gray-700 hover:bg-yellow-100 hover:text-yellow-600 transition duration-300"
-                  >
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="bg-gray-100 p-3 rounded-full text-gray-700 hover:bg-yellow-100 hover:text-yellow-600 transition duration-300"
-                  >
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a
-                    href="#"
-                    class="bg-gray-100 p-3 rounded-full text-gray-700 hover:bg-yellow-100 hover:text-yellow-600 transition duration-300"
-                  >
-                    <i class="fab fa-instagram"></i>
-                  </a>
                 </div>
               </div>
             </div>
@@ -878,7 +739,7 @@
               <span class="font-bold text-xl">FOREMAS</span>
             </div>
             <p class="mt-2 text-gray-400 max-w-md">
-              Advanced ARIMA-based gold price prediction system to help you make
+              Advanced LSTM-based gold price prediction system to help you make
               informed investment decisions.
             </p>
           </div>
@@ -958,33 +819,6 @@
                 </li>
               </ul>
             </div>
-
-            <div>
-              <h4 class="font-semibold text-lg mb-4">Legal</h4>
-              <ul class="space-y-2">
-                <li>
-                  <a
-                    href="#"
-                    class="text-gray-400 hover:text-yellow-400 transition duration-300"
-                    >Privacy Policy</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="text-gray-400 hover:text-yellow-400 transition duration-300"
-                    >Terms of Service</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="text-gray-400 hover:text-yellow-400 transition duration-300"
-                    >Disclaimer</a
-                  >
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
 
@@ -994,32 +828,6 @@
           <p class="text-gray-400 mb-4 md:mb-0">
             &copy; 2025 FOREMAS. All rights reserved.
           </p>
-          <div class="flex space-x-6">
-            <a
-              href="#"
-              class="text-gray-400 hover:text-yellow-400 transition duration-300"
-            >
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a
-              href="#"
-              class="text-gray-400 hover:text-yellow-400 transition duration-300"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a
-              href="#"
-              class="text-gray-400 hover:text-yellow-400 transition duration-300"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              href="#"
-              class="text-gray-400 hover:text-yellow-400 transition duration-300"
-            >
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
         </div>
       </div>
     </footer>
@@ -1032,206 +840,7 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      // Mobile menu toggle
-      const mobileMenuButton = document.querySelector(".mobile-menu-button");
-      const mobileMenu = document.querySelector(".mobile-menu");
-
-      mobileMenuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-
-          // Close mobile menu if open
-          if (!mobileMenu.classList.contains("hidden")) {
-            mobileMenu.classList.add("hidden");
-          }
-        });
-      });
-
-      // Back to top button
-      const backToTopButton = document.getElementById("backToTop");
-
-      window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 300) {
-          backToTopButton.classList.remove("hidden");
-        } else {
-          backToTopButton.classList.add("hidden");
-        }
-      });
-
-      backToTopButton.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-
-      // Confidence level slider
-      const confidenceSlider = document.getElementById("confidence");
-      const confidenceValue = document.getElementById("confidenceValue");
-
-      confidenceSlider.addEventListener("input", () => {
-        confidenceValue.textContent = `${confidenceSlider.value}%`;
-      });
-
-      // Prediction form handling
-      const predictButton = document.getElementById("predictButton");
-      const loadingIndicator = document.getElementById("loadingIndicator");
-      const predictionResults = document.getElementById("predictionResults");
-      const initialState = document.getElementById("initialState");
-
-      predictButton.addEventListener("click", () => {
-        // Show loading state
-        initialState.classList.add("hidden");
-        loadingIndicator.classList.remove("hidden");
-        predictionResults.classList.add("hidden");
-
-        // Simulate API call delay
-        setTimeout(() => {
-          loadingIndicator.classList.add("hidden");
-          predictionResults.classList.remove("hidden");
-
-          // Update results based on form inputs
-          const timeframe = document.getElementById("timeframe");
-          const timeframeText = timeframe.options[timeframe.selectedIndex].text;
-          document.getElementById("resultTimeframe").textContent =
-            timeframeText;
-          document.getElementById(
-            "resultConfidence"
-          ).textContent = `${confidenceSlider.value}%`;
-
-          // Generate random price change for demo
-          const changePercentage = (Math.random() * 6 - 2).toFixed(2);
-          const isPositive = changePercentage >= 0;
-          const changeText = isPositive
-            ? `+${changePercentage}%`
-            : `${changePercentage}%`;
-
-          document.getElementById("expectedChange").textContent = changeText;
-          document.getElementById("expectedChange").className = `font-medium ${
-            isPositive ? "text-green-600" : "text-red-600"
-          }`;
-
-          // Update advice based on prediction
-          const adviceText = isPositive
-            ? "Based on our analysis, we recommend considering buying gold as prices are expected to rise."
-            : "Based on our analysis, you might want to hold off buying gold as prices are expected to drop.";
-
-          document.getElementById("investmentAdvice").textContent = adviceText;
-
-          // Update prediction date
-          const today = new Date();
-          const predictionDate = new Date(today);
-          predictionDate.setDate(today.getDate() + parseInt(timeframe.value));
-
-          const options = { year: "numeric", month: "long", day: "numeric" };
-          document.getElementById("predictionDate").textContent =
-            predictionDate.toLocaleDateString("en-US", options);
-
-          // Generate chart
-          generatePriceChart(parseInt(timeframe.value), isPositive);
-        }, 1500);
-      });
-
-      // Generate price chart
-      function generatePriceChart(days, isPositive) {
-        const ctx = document.getElementById("priceChart").getContext("2d");
-
-        // Destroy previous chart if exists
-        if (window.priceChart) {
-          window.priceChart.destroy();
-        }
-
-        // Generate labels
-        const labels = [];
-        const today = new Date();
-        for (let i = 0; i <= days; i++) {
-          const date = new Date(today);
-          date.setDate(today.getDate() + i);
-          labels.push(
-            date.toLocaleDateString("en-US", { month: "short", day: "numeric" })
-          );
-        }
-
-        // Generate data points
-        const data = [];
-        const currentPrice = 1850.75;
-        data.push(currentPrice);
-
-        for (let i = 1; i <= days; i++) {
-          const fluctuation = isPositive
-            ? Math.random() * 5 + 1 // Positive trend
-            : -Math.random() * 5 - 1; // Negative trend
-
-          const previousPrice = data[i - 1];
-          const newPrice = previousPrice * (1 + fluctuation / 100);
-          data.push(parseFloat(newPrice.toFixed(2)));
-        }
-
-        // Create chart
-        window.priceChart = new Chart(ctx, {
-          type: "line",
-          data: {
-            labels: labels,
-            datasets: [
-              {
-                label: "Gold Price (USD)",
-                data: data,
-                borderColor: "#D4AF37",
-                backgroundColor: "rgba(212, 175, 55, 0.1)",
-                borderWidth: 3,
-                pointBackgroundColor: "#D4AF37",
-                pointRadius: 3,
-                pointHoverRadius: 5,
-                fill: true,
-                tension: 0.4,
-              },
-            ],
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: {
-                position: "top",
-              },
-              tooltip: {
-                mode: "index",
-                intersect: false,
-              },
-            },
-            scales: {
-              y: {
-                beginAtZero: false,
-                grid: {
-                  color: "rgba(0, 0, 0, 0.05)",
-                },
-              },
-              x: {
-                grid: {
-                  display: false,
-                },
-              },
-            },
-          },
-        });
-
-        // Update predicted price display
-        const predictedPrice = data[data.length - 1].toFixed(2);
-        document.getElementById(
-          "predictedPrice"
-        ).textContent = `$${predictedPrice}`;
-      }
-    </script>
   </body>
 </html>
